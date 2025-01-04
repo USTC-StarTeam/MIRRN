@@ -1,0 +1,22 @@
+
+taobao:
+    data_root: ../data/taobao/
+    data_format: parquet
+    train_data: ../data/taobao/taobao/train.parquet
+    valid_data: ../data/taobao/taobao/test.parquet
+    test_data: ../data/taobao/taobao/test.parquet
+
+tmall:
+    data_root: ../data/tmall/
+    data_format: parquet
+    train_data: ../data/tmall/tmall/train.parquet
+    valid_data: ../data/tmall/tmall/test.parquet
+    test_data: ../data/tmall/tmall/test.parquet
+
+alipay:
+    data_root: ../data/alipay/
+    data_format: parquet
+    train_data: ../data/alipay/alipay/train.parquet
+    valid_data: ../data/alipay/alipay/test.parquet
+    test_data: ../data/alipay/alipay/test.parquet
+

@@ -1,0 +1,22 @@
+
+alipay:
+    data_format: csv
+    data_root: ../data/alipay/
+    feature_cols:
+    - {active: true, dtype: int, name: user_id, type: categorical}
+    - {active: true, dtype: str, name: item_id, type: categorical}
+    - {active: true, dtype: str, name: cate_id, type: categorical}
+    - {active: true, dtype: str, max_len: 300,
+        name: item_history, share_embedding: item_id, feature_encoder: None, splitter: ^, type: sequence, padding: pre}
+#        feature_encoder: layers.MaskedAveragePooling()
+    - {active: true, dtype: str, max_len: 300,
+        name: cate_history, share_embedding: cate_id, feature_encoder: None, splitter: ^, type: sequence, padding: pre}
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    test_data: ../data/alipay/test.csv
+    train_data: ../data/alipay/train.csv
+    valid_data: ../data/alipay/valid.csv
+
+
+
+
